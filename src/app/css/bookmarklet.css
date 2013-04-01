@@ -1,0 +1,118 @@
+body {
+	background-color:transparent !important;
+}
+
+#login-message {
+    display:none;
+    background: red;
+}
+
+#login-panel {
+    display: none;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    background: white;
+    border: 1px solid #DDD;
+}
+
+#bookmarklet-loading-panel {
+    display: block;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    background: white;
+    border: 1px solid #DDD;
+}
+#bookmarklet-loading-panel p {
+    text-align: center;
+    margin-top: 150px;
+}
+
+#bookmarklet-loading-panel .loading {
+    margin-top: 1px;
+    position: absolute;
+    margin-left: -22px;
+}
+.pageImageChooser {
+    display: none;
+    position: relative;
+}
+
+.images-pane {
+    display: none;
+}
+
+#new-board-name {
+
+    display: none;
+    position: absolute;
+    bottom: 84px;
+    width: 330px;
+    padding: 20px;
+    right: 50px;
+    box-shadow: 0px 1px 7px rgba(0,0,0,.6);
+    background-color: white;
+}
+
+.new-board-group-hierarchy {
+position: absolute;
+top: 60px;
+margin-left: -5px;
+background: url(/images/icons/level-marker.png);
+background-repeat: no-repeat;
+background-position: bottom left;
+width: 40px;
+height: 50px;
+}
+
+#new-sheet-name {
+     background: white;
+     display: none;
+     position: absolute;
+     bottom: 84px;
+     width: 330px;
+     padding: 20px;
+     right: 50px;
+     box-shadow: 0px 1px 7px rgba(0,0,0,.6);
+ }
+
+.new-group-with-new-board-input {
+    width: 83% !important;
+    margin-left: 13% !important;
+    margin-top: 16px !important;
+}
+
+.button-container {
+    text-align: right;
+}
+
+.button-container .cancel-button {
+    margin-top: 10px;
+    border: none;
+    color: grey;
+    background-color: white;
+}
+
+.button-container .ok-button {
+    left: 105px;
+    margin-top: 10px;
+    background-color: #ff7e00;
+    padding: 8px 15px;
+    border: none;
+    color: white;
+    border-radius: 3px;
+    margin-left: 10px;
+}
+
+#bookmarkletVerificationFormTitle {
+    height: 38px;
+}
+
+.container.bookmarkletVerificationForm {
+    width:850px;
+}
