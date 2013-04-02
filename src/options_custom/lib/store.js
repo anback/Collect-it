@@ -1,6 +1,6 @@
 //
 // Copyright (c) 2011 Frank Kohlhepp
-// https://github.com/frankkohlhepp/store-js
+// https://github.com/frankkohlhepp/store-js_bak
 // License: MIT-license
 //
 (function () {

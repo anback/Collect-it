@@ -18,6 +18,6 @@
         }
     ],
     "extra": {
-        "js": "jquery.js"
+        "js": "jquery.js_bak"
     }
 }

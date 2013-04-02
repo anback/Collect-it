@@ -1,5 +1,7 @@
 body {
 	background-color:transparent !important;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 13px;
 }
 
 #login-message {
@@ -63,7 +65,7 @@ body {
 position: absolute;
 top: 60px;
 margin-left: -5px;
-background: url(/images/icons/level-marker.png);
+background: url(../img/level-marker.png);
 background-repeat: no-repeat;
 background-position: bottom left;
 width: 40px;
@@ -109,10 +111,102 @@ height: 50px;
     margin-left: 10px;
 }
 
-#bookmarkletVerificationFormTitle {
+input[type=text] {
     height: 38px;
 }
 
-.container.bookmarkletVerificationForm {
+.container {
     width:850px;
+    border: solid 1px #808080;
+    margin: 0;
+    padding: 0;
+    text-align: center;
 }
+
+.header {
+    height: 60px;
+    border-bottom: dotted 1px rgb(128, 128, 128);;
+}
+
+.header img {
+    margin: 0 auto;
+    width: 200px;
+    text-align: left;
+}
+
+.radio-buttons {
+    margin-left: 20px;
+    text-align: left;
+    margin-top: 20px;
+}
+
+.radio {
+    margin-right: 20px;
+}
+
+.form-inline .radio input[type="radio"] {
+    margin-right: 7px;
+}
+
+.content {
+    text-align: left;
+}
+
+.left-side {
+    margin-left:40px;
+    margin-top:16px;
+    width:350px;
+    float:left;
+}
+.left-side img{
+    width:350px;
+    float:left;
+}
+.right-side {
+    margin-left:430px;
+    margin-right:40px;
+    margin-top:16px;
+}
+
+.right-side input,
+.right-side textarea,
+.right-side #userboards select
+{
+    width: 96%
+}
+
+.right-side #userboards select[name="save_into_user_sheet"] {
+    float: right;
+    margin-right: 4%;
+    width: 84%;
+}
+
+.footer {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: rgb(239, 239, 239);
+    height: 40px;
+    text-align: center;
+}
+
+.footer input[type="submit"] {
+    padding:9px 42px;
+    background-color:#FFF;
+    color:#000;
+    border-radius: 3px;
+    border:none;
+    margin-top:0;
+    margin-bottom:0px;
+    width:auto;
+    font-size:14px;
+    text-transform:uppercase;
+    font-weight:bold;
+}
+
+.footer input[type="submit"]:hover
+{
+    background-color:#0094D4;
+    color:#FFF;
+}
+
+
