@@ -1,11 +1,12 @@
 {
-  "name": "CHANGE THIS : Extension boilerplate",
+  "name": "Collectably",
   "version": "0.0.1",
   "manifest_version": 2,
-  "description": "This extension was created with the awesome extensionizr.io",
-  "homepage_url": "http://extensionizr.com",
+  "description": "Chrome Extension to add links to your Collectably.com wall",
+  "homepage_url": "http://www.collectably.com",
   "icons": {
     "16": "icons/icon16.png",
+	"19": "icons/icon19.png",
     "48": "icons/icon48.png",
     "128": "icons/icon128.png"
   },
@@ -16,7 +17,7 @@
   },
   "options_page": "src/options_custom/index.html",
   "browser_action": {
-    "default_icon": "icons/icon16.png",
+    "default_icon": "icons/icon19.png",
     "default_title": "browser action demo",
     "default_popup": "src/browser_action/browser_action.html"
   },
