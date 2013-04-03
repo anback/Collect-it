@@ -99,6 +99,32 @@ var Bookmarklet = {
         var numberOfGroupsInSelectedBoard = selectOptions.length;
         $(selectOptions[numberOfGroupsInSelectedBoard - 1]).html(newGroupName);
         $(selectOptions[numberOfGroupsInSelectedBoard - 1]).attr("selected", "true");
+    },
+    clickRadioButton : function(radiobutton) {
+
+        $("input[type=radio]").each(function() {
+            var item = $(this);
+            if(!item.is($(radiobutton)))
+                $(this).removeAttr('checked');
+        });
+
+        [".page-pane",".images-pane"].forEach(function(item) {
+            $(item).toggleClass("hide");
+            $(item).toggleClass("block");
+        });
+    },
+    findImages : function() {
+        var res = $(document.images).toArray();
+
+        // Filter only the ones who are higher than 50 px
+        res = res.filter(function(item) {
+            return item.offsetHeight > 50;
+        });
+
+        // Sort the images
+        return res.sort(function(a,b) {
+            return a.offsetHeight < b.offsetHeight ? 1 : -1;
+        });
     }
 }
 
@@ -121,6 +147,8 @@ var collectablyBoardSheets = {
 
 
 $(document).ready(function() {
+
+    // Add listeners
     $("select[name=save_into_user_board]").change(Bookmarklet.boardSelected);
     $("select[name=save_into_user_sheet]").change(Bookmarklet.groupSelected);
     $("#ok-new-board-name").click(function(event) {
@@ -144,7 +172,18 @@ $(document).ready(function() {
         Bookmarklet.cancelNewGroupName();
     });
 
-    //Add Create New Board Node
+    $("#bookmarkpageRadio").click(function() {
+        Bookmarklet.clickRadioButton(this)
+    });
+    $("#bookmarkimageRadio").click(function() {
+        Bookmarklet.clickRadioButton(this);
+    });
+
+    $(".mini-thumbs-scroll-pic a img").click(function() {
+        $(".chosenPhoto img").attr('src',$(this).attr('src'));
+    });
+
+    //Add Create New Board Node and Sheet Node
     collectablyBoardSheets['create-new-board'] = {
         name : '+ Create new board'
     };
@@ -161,4 +200,15 @@ $(document).ready(function() {
     }
 
     $("select[name=save_into_user_board]").trigger('change');
+
+    //Populate Images
+    Bookmarklet.findImages().forEach(function(item) {
+        $(".mini-thumbs-scroll-pic").append(
+            "<!--li class='mini-thumbs-scroll-pic'>" +
+                "<a class='thumbnail'>" +
+                "<img src=''" + $(item).attr('src') + "'>" +
+            "</a>" +
+            "</li>"
+        );
+    });
 });
