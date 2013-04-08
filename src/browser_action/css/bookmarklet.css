@@ -124,10 +124,8 @@ input[type=text] {
     border-bottom: dotted 1px rgb(128, 128, 128);;
 }
 
-.header img {
-    margin: 0 auto;
-    width: 200px;
-    text-align: left;
+.header img.close {
+    text-align: right;
 }
 
 .radio-buttons {
@@ -168,7 +166,12 @@ input[type=text] {
 .right-side textarea,
 .right-side #userboards select
 {
-    width: 96%
+    width: 96%;
+}
+
+#userboards select
+{
+    height: 35px
 }
 
 .right-side #userboards select[name="save_into_user_sheet"] {

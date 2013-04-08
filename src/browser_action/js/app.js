@@ -1,5 +1,4 @@
 var Bookmarklet = {
-
     boardHtmlSnippet : function(value, name) {return '<option value="' + value + '">' + name + '</option>'},
     checkKeyInput: function(event) {
         // If event is enter
@@ -100,19 +99,7 @@ var Bookmarklet = {
         $(selectOptions[numberOfGroupsInSelectedBoard - 1]).html(newGroupName);
         $(selectOptions[numberOfGroupsInSelectedBoard - 1]).attr("selected", "true");
     },
-    clickRadioButton : function(radiobutton) {
 
-        $("input[type=radio]").each(function() {
-            var item = $(this);
-            if(!item.is($(radiobutton)))
-                $(this).removeAttr('checked');
-        });
-
-        [".page-pane",".images-pane"].forEach(function(item) {
-            $(item).toggleClass("hide");
-            $(item).toggleClass("block");
-        });
-    },
     findImages : function() {
         var res = $(document.images).toArray();
 
@@ -173,10 +160,26 @@ $(document).ready(function() {
     });
 
     $("#bookmarkpageRadio").click(function() {
-        Bookmarklet.clickRadioButton(this)
+        $("#bookmarkimageRadio").removeAttr('checked');
+
+        $(".images-pane").removeClass("block");
+        $(".page-pane").removeClass("hide");
+
+        $(".images-pane").addClass("hide");
+        $(".page-pane").addClass("block");
     });
     $("#bookmarkimageRadio").click(function() {
-        Bookmarklet.clickRadioButton(this);
+        $("#bookmarkpageRadio").removeAttr('checked');
+
+        $(".page-pane").removeClass("block");
+        $(".images-pane").removeClass("hide");
+
+        $(".page-pane").addClass("hide");
+        $(".images-pane").addClass("block");
+    });
+
+    $("#close-bookmarklet-button").click(function () {
+        $("#bookmarklet").remove();
     });
 
     $(".mini-thumbs-scroll-pic a img").click(function() {

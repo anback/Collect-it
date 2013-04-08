@@ -11,15 +11,14 @@
     "128": "icons/icon128.png"
   },
   "default_locale": "en",
-  "background": { "scripts": ["src/bg/background.js"] },
   "options_page": "src/options_custom/index.html",
   "browser_action": {
     "default_icon": "icons/icon19.png",
-    "default_title": "browser action demo",
+    "default_title": "Collect This!",
     "default_popup": "src/browser_action/browser_action.html"
   },
   "permissions": [
-    "tabs",
-    "http://*/*"
-  ]
+    "tabs", "http://*/*", "https://*/*"
+  ],	
+  "web_accessible_resources": ["src/browser_action/bookmarklet.html"]
 }

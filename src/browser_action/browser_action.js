@@ -1,0 +1,1 @@
+﻿chrome.tabs.executeScript(null, { file: "src/browser_action/bookmarklet.js" });
