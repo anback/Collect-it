@@ -186,6 +186,26 @@ $(document).ready(function() {
         $(".chosenPhoto img").attr('src',$(this).attr('src'));
     });
 
+
+    $("#submitBookmark").click(function() {
+
+        var selectedBoards = $("select[name=save_into_user_board] option[selected=selected]");
+        var selectedBoard;
+        if(selectedBoards.length == 0)
+            selectedBoard = $("select[name=save_into_user_board] option").first();
+        else
+            selectedBoard = $("select[name=save_into_user_board] option[selected=selected]").first();
+
+        console.log("SelectedBoard: " + selectedBoard.html())
+        $.ajax({
+            type: "POST",
+            url: "http://localhost:4000/demoforstingday",
+            data: {boardname : selectedBoard.html()},
+            success: $("#close-bookmarklet-button").trigger('click')
+        });
+    });
+
+
     //Add Create New Board Node and Sheet Node
     collectablyBoardSheets['create-new-board'] = {
         name : '+ Create new board'
