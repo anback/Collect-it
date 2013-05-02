@@ -14,8 +14,10 @@
   "options_page": "src/options_custom/index.html",
   "browser_action": {
     "default_icon": "icons/icon19.png",
-    "default_title": "Collect This!",
-    "default_popup": "src/browser_action/browser_action.html"
+    "default_title": "Collect This!"
+  },
+  "background": {
+        "scripts": ["src/browser_action/browser_action.js"]
   },
   "permissions": [
     "tabs", "http://*/*", "https://*/*"

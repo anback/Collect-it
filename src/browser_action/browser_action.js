@@ -1,1 +1,4 @@
-﻿chrome.tabs.executeScript(null, { file: "src/browser_action/bookmarklet.js" });
+﻿chrome.browserAction.onClicked.addListener(function(tab) {
+    chrome.tabs.executeScript(null, { file: "src/browser_action/bookmarklet.js" });
+});
+

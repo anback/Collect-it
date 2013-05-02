@@ -42,7 +42,7 @@
       <file leaf-file-name="browser_action.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/browser_action/browser_action.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="0" selection-start="119" selection-end="119" vertical-scroll-proportion="-5.0">
+            <state line="4" column="9" selection-start="87" selection-end="87" vertical-scroll-proportion="-2.5">
               <folding />
             </state>
           </provider>
@@ -57,10 +57,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="manifest.json" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="manifest.json" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/manifest.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="1" selection-start="717" selection-end="717" vertical-scroll-proportion="0.0">
+            <state line="25" column="1" selection-start="737" selection-end="737" vertical-scroll-proportion="0.37276343">
               <folding />
             </state>
           </provider>
@@ -78,16 +78,16 @@
       <file leaf-file-name="browser_action.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/browser_action/browser_action.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+            <state line="1" column="45" selection-start="104" selection-end="137" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="app.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="app.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/browser_action/js/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="205" column="7" selection-start="7008" selection-end="7008" vertical-scroll-proportion="0.69417477">
+            <state line="183" column="0" selection-start="6166" selection-end="6166" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -112,7 +112,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/app/css/style.css" />
         <option value="$PROJECT_DIR$/src/app/css/style_bak.css" />
         <option value="$PROJECT_DIR$/src/app/css/bookmarklet.css" />
         <option value="$PROJECT_DIR$/src/app/app.html" />
@@ -121,13 +120,14 @@
         <option value="$PROJECT_DIR$/src/bg/backgroundcopy.js" />
         <option value="$PROJECT_DIR$/src/bg/bootBookMarklet.js" />
         <option value="$PROJECT_DIR$/src/bg/background.js" />
-        <option value="$PROJECT_DIR$/src/browser_action/browser_action.html" />
         <option value="$PROJECT_DIR$/src/app/js/app.js" />
-        <option value="$PROJECT_DIR$/manifest.json" />
         <option value="$PROJECT_DIR$/src/browser_action/bookmarklet.js" />
         <option value="$PROJECT_DIR$/src/browser_action/css/bookmarklet.css" />
         <option value="$PROJECT_DIR$/src/browser_action/bookmarklet.html" />
         <option value="$PROJECT_DIR$/src/browser_action/js/app.js" />
+        <option value="$PROJECT_DIR$/src/browser_action/browser_action.html" />
+        <option value="$PROJECT_DIR$/src/browser_action/browser_action.js" />
+        <option value="$PROJECT_DIR$/manifest.json" />
       </list>
     </option>
   </component>
@@ -194,22 +194,8 @@
               <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-          </PATH>
-          <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Collect-it" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Collect-it" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="browser_action" />
+              <option name="myItemId" value="options_custom" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -228,10 +214,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="browser_action" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -446,16 +428,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/manifest.json">
+    <entry file="file://$PROJECT_DIR$/src/browser_action/css/bookmarklet.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="1" selection-start="717" selection-end="717" vertical-scroll-proportion="0.0">
+        <state line="242" column="25" selection-start="3977" selection-end="3977" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/browser_action/css/bookmarklet.css">
+    <entry file="file://$PROJECT_DIR$/src/browser_action/js/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="242" column="25" selection-start="3977" selection-end="3977" vertical-scroll-proportion="0.0">
+        <state line="183" column="0" selection-start="6166" selection-end="6166" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/browser_action/bookmarklet.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="96" column="49" selection-start="5953" selection-end="5967" vertical-scroll-proportion="-33.125">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/browser_action/browser_action.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="9" selection-start="87" selection-end="87" vertical-scroll-proportion="-2.5">
           <folding />
         </state>
       </provider>
@@ -469,28 +465,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/browser_action/browser_action.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+        <state line="1" column="45" selection-start="104" selection-end="137" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/browser_action/browser_action.html">
+    <entry file="file://$PROJECT_DIR$/manifest.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="0" selection-start="119" selection-end="119" vertical-scroll-proportion="-5.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/browser_action/bookmarklet.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="96" column="49" selection-start="5953" selection-end="5967" vertical-scroll-proportion="-33.125">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/browser_action/js/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="205" column="7" selection-start="7008" selection-end="7008" vertical-scroll-proportion="0.69417477">
+        <state line="25" column="1" selection-start="737" selection-end="737" vertical-scroll-proportion="0.37276343">
           <folding />
         </state>
       </provider>
