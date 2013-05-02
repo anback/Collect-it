@@ -11,5 +11,15 @@ iframe.style.height ="560px";
 iframe.style.border = "0";
 iframe.style.zindex = 2147483640;
 iframe.id = "bookmarklet";
+iframe.name = "bookmarklet";
 
 document.body.appendChild(iframe);
+
+
+window.addEventListener("message", function (message) {
+    if (message.data === "collectably.bookmarklet.close") {
+        document.body.removeChild(iframe);
+    }
+});
+
+

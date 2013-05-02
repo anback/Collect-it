@@ -179,7 +179,7 @@ $(document).ready(function() {
     });
 
     $("#close-bookmarklet-button").click(function () {
-        $("#bookmarklet").remove();
+        window.parent.postMessage("collectably.bookmarklet.close", "*");
     });
 
     $(".mini-thumbs-scroll-pic a img").click(function() {

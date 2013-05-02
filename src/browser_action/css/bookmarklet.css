@@ -253,5 +253,9 @@ input[type=text] {
     display: block;
 }
 
+#close-bookmarklet-button {
+    cursor: pointer;
+}
+
 
 
