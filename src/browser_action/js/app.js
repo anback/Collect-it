@@ -129,7 +129,21 @@ var collectablyBoardSheets = {
                 name :"Fancy Settings"
             }
         ]
-    }
+    },
+    "51544e0aa9e5910200000009" : {
+        name : "Chrome for Collectably",
+        groups : [
+            {   _id : "51544e0aa9e5910200000007",
+                name :"Gettings Started"
+            },
+            {   _id : "51544f85a9e591020000000b",
+                name :"Permissions"
+            },
+            {   _id : "515451b50499140200000013",
+                name :"Fancy Settings"
+            }
+        ]
+    }    
 };
 
 
@@ -235,3 +249,13 @@ $(document).ready(function() {
         );
     });
 });
+
+//desaturate links that are not included
+ $(document).ready(function() {
+	  $('.include-link-btn').click(function() {
+	 $(this).closest('.single-tab-link-container').toggleClass('do-not-bookmark');
+});
+	
+});
+ 
+     

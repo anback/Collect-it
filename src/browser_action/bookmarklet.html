@@ -12,13 +12,40 @@
         <!--script src="http://www.google-analytics.com/ga.js" async="" type="text/javascript"></script-->
     </head>
     <body>
-        <div class="container">
+       <div class="bookmarklet-background">
+        <div class="container white-bg">
             <div class="header">
-                <img class="logo" src="./img/logo-black-bookmarklet.png">
-                <img id="close-bookmarklet-button" class="close" src="./img/close.png">
+              <ul>
+               <li class="header-hamburger">
+               </li>
+               
+               <li>
+                <input id="submitBookmark" type="submit" value="Add">
+               </li>
+               
+              <li id="close-bookmarklet-button" class="header-close">
+               </li>
+            </ul>
+            <div class="clearfix"></div>
+<!--                <img class="logo" src="./img/logo-black-bookmarklet.png">
+                <img id="close-bookmarklet-button" class="close" src="./img/close.png">-->
             </div>
+            <div class="header-2">
+              <ul>
+                 <li>
+            <select name="save_into_user_board">
+                            </select>
+                </li>
+                <li class="single-multi-choser">
+                   <span>Multi</span>
+                   <a href="#">Single</a>
+                </li>
+              </ul>            
+                <div class="clearfix"></div>           
+            </div>
+            
             <div class="body">
-                <div class="radio-buttons">
+               <!-- <div class="radio-buttons">
                     <form class="form-inline">
                         <label class="radio">
                             <input id="bookmarkpageRadio" type="radio" checked="checked" value="page" /> Bookmark Page
@@ -27,9 +54,10 @@
                             <input id="bookmarkimageRadio" type="radio" value="image">   Pick an image from this page
                         </label>
                     </form>
-                </div>
+                </div>-->
                 <div class="content">
-                    <div class="left-side">
+                
+                    <!--<div class="left-side">
                         <div class="page-pane block">
                             <div id="thumbnail-preview">
                                 <img src="https://api.url2png.com/v3/P5061748FC65B5/5d196e3c0d25066d7d404c2b9c01e923/580x406/http%3A//www.this-page-intentionally-left-blank.org/">
@@ -59,29 +87,35 @@
                                 </ul>
                             </div>
                         </div>
-                    </div>
-                    <div class="right-side">
+                    </div>-->
+                    
+                    
+                    
+<!--                    <div class="right-side">
                         <input id="bookmarkletVerificationFormTitle" type="text" name="title" placeholder="Title">
                         <textarea rows="7" cols="30" name="description" placeholder="Add a note (optional)">This Page Intentionally Left Blank (according to the recommendations of the TPILB-Project).</textarea>
                         <div id="userboards">
                             <select name="save_into_user_board">
                             </select>
+                            -->
                             <div id="new-board-name">
                                 <div id="newBoardForm">
-                                    <div class="new-board-group-hierarchy"></div>
+                                    <!--<div class="new-board-group-hierarchy"></div>-->
                                     <input type="text" name="new-board-name" placeholder="New board Name...">
-                                    <input type="text" name="new-sheet-name" placeholder="New group Name..." class="new-group-with-new-board-input">
+                                    <!--<input type="text" name="new-sheet-name" placeholder="New group Name..." class="new-group-with-new-board-input">-->
                                     <div class="button-container">
                                         <button id="cancel-new-board-name" class="cancel-button">Cancel</button>
                                         <button id="ok-new-board-name" class="ok-button">OK</button>
                                     </div>
                                 </div>
                             </div>
+                            <!--
                             <div id="save-into-user-sheet">
                                 <img src="./img/level-marker.png" />
                                 <select name="save_into_user_sheet">
                                 </select>
                             </div>
+                            -->
                             <div id="new-sheet-name">
                                 <form id="newGroupForm">
                                     <input type="text" name="new-sheet-name" placeholder="New group name...">
@@ -91,10 +125,108 @@
                                     </div>
                                 </form>
                             </div>
+                            <!--
                         </div>
-                    </div>
+                    </div>-->
+                    
+                    
+                    <!-- links mockup -->
+                    <div class="links-area nice-scrollbar">
+                    <div class="single-tab">
+                    
+                    <!--link-->
+                    <div class="single-tab-link-container">
+      <div class="image-holder">
+        <img src="http://i4.ytimg.com/vi/o7EOdJxKVcI/hqdefault.jpg" class="youtube-thumb">
+         </div>
+        <div class="link-text-holder">
+         <h3>Incentives: How To Engineer User Growth and Virality</h3>
+         <p class="link-bookmarklet">http://platformed.info/incentives-virality-platform-growth-hacking-hacks/</p>
+         <p class="description-bookmarklet">One of the factors that make or break an early stage startup is its ability to acquire users cost-effectively. Startups are increasingly innovating around their user acquisition strategies to acquire users through viral mechanics in the hope of reaching the all-important critical mass without having to spend a fortune.</p>
+         </div>
+        <a href="#" class="include-link-btn"></a>
+        <div class="clearfix"></div> 
+      </div>
+      <!--link-->
+                    <!--link-->
+                    <div class="single-tab-link-container">
+      <div class="image-holder">
+         <img src="https://arble-page-snapshot-cache.s3.amazonaws.com/8df590b6-d2da-7b92-276f-d0d93127f893.png">
+         </div>
+        <div class="link-text-holder">
+         <h3>Incentives: How To Engineer User Growth and Virality</h3>
+         <p class="link-bookmarklet">http://platformed.info/incentives-virality-platform-growth-hacking-hacks/</p>
+         <p class="description-bookmarklet">One of the factors that make or break an early stage startup is its ability to acquire users cost-effectively. Startups are increasingly innovating around their user acquisition strategies to acquire users through viral mechanics in the hope of reaching the all-important critical mass without having to spend a fortune.</p>
+         </div>
+        <a href="#" class="include-link-btn"></a>
+        <div class="clearfix"></div> 
+      </div>
+      <!--link-->
+
+                    <!--link-->
+                    <div class="single-tab-link-container">
+      <div class="image-holder">
+         <img src="https://arble-page-snapshot-cache.s3.amazonaws.com/8df590b6-d2da-7b92-276f-d0d93127f893.png">
+         </div>
+        <div class="link-text-holder">
+         <h3>Incentives: How To Engineer User Growth and Virality</h3>
+         <p class="link-bookmarklet">http://platformed.info/incentives-virality-platform-growth-hacking-hacks/</p>
+         <p class="description-bookmarklet">One of the factors that make or break an early stage startup is its ability to acquire users cost-effectively. Startups are increasingly innovating around their user acquisition strategies to acquire users through viral mechanics in the hope of reaching the all-important critical mass without having to spend a fortune.</p>
+         </div>
+        <a href="#" class="include-link-btn"></a>
+        <div class="clearfix"></div> 
+      </div>
+      <!--link-->
+      
+<!--link-->
+                    <div class="single-tab-link-container">
+      <div class="image-holder">
+         <img src="https://arble-page-snapshot-cache.s3.amazonaws.com/8df590b6-d2da-7b92-276f-d0d93127f893.png">
+         </div>
+        <div class="link-text-holder">
+         <h3>Incentives: How To Engineer User Growth and Virality</h3>
+         <p class="link-bookmarklet">http://platformed.info/incentives-virality-platform-growth-hacking-hacks/</p>
+         <p class="description-bookmarklet">One of the factors that make or break an early stage startup is its ability to acquire users cost-effectively. Startups are increasingly innovating around their user acquisition strategies to acquire users through viral mechanics in the hope of reaching the all-important critical mass without having to spend a fortune.</p>
+         </div>
+        <a href="#" class="include-link-btn"></a>
+        <div class="clearfix"></div> 
+      </div>
+      <!--link-->
+<!--link-->
+                    <div class="single-tab-link-container">
+      <div class="image-holder">
+         <img src="https://arble-page-snapshot-cache.s3.amazonaws.com/8df590b6-d2da-7b92-276f-d0d93127f893.png">
+         </div>
+        <div class="link-text-holder">
+         <h3>Incentives: How To Engineer User Growth and Virality</h3>
+         <p class="link-bookmarklet">http://platformed.info/incentives-virality-platform-growth-hacking-hacks/</p>
+         <p class="description-bookmarklet">One of the factors that make or break an early stage startup is its ability to acquire users cost-effectively. Startups are increasingly innovating around their user acquisition strategies to acquire users through viral mechanics in the hope of reaching the all-important critical mass without having to spend a fortune.</p>
+         </div>
+        <a href="#" class="include-link-btn"></a>
+        <div class="clearfix"></div> 
+      </div>
+      <!--link-->
+<!--link-->
+                    <div class="single-tab-link-container">
+      <div class="image-holder">
+         <img src="https://arble-page-snapshot-cache.s3.amazonaws.com/8df590b6-d2da-7b92-276f-d0d93127f893.png">
+         </div>
+        <div class="link-text-holder">
+         <h3>Incentives: How To Engineer User Growth and Virality</h3>
+         <p class="link-bookmarklet">http://platformed.info/incentives-virality-platform-growth-hacking-hacks/</p>
+         <p class="description-bookmarklet">One of the factors that make or break an early stage startup is its ability to acquire users cost-effectively. Startups are increasingly innovating around their user acquisition strategies to acquire users through viral mechanics in the hope of reaching the all-important critical mass without having to spend a fortune.</p>
+         </div>
+        <a href="#" class="include-link-btn"></a>
+        <div class="clearfix"></div> 
+      </div>
+      <!--link-->                  
+      
+      </div>
+      </div>
+          <!-- links mockup -->           
+                    
                     <div class="footer">
-                        <input id="submitBookmark" type="submit" value="Add">
+                    <img class="logo" src="./img/logo-black.png">
                     </div>
                 </div>
             </div>
@@ -103,6 +235,10 @@
         <div id="bookmarklet-loading-panel" style="display: none;">
             <p><img src="./img/ajax-loader.gif" class="loading"><span>LOADING</span></p>
         </div>
+       </div>
+       
+
+       
     </body>
 </html>
         

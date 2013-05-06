@@ -2,16 +2,16 @@
 iframe.src = chrome.extension.getURL('src/browser_action/bookmarklet.html');
 
 iframe.style.position= "fixed";
-iframe.style.top =  "50px";
+iframe.style.top =  "29px";
 iframe.style.marginLeft = "50%";
-iframe.style.left = "-435px";
-iframe.style.width = "870px";
-iframe.style.backgroundColor = "#FFF";
-iframe.style.height ="560px";
+iframe.style.left = "-436px";
+iframe.style.width = "872px";
+iframe.style.height ="580px";
 iframe.style.border = "0";
-iframe.style.zindex = 2147483640;
+iframe.style.zIndex = "9999999";
 iframe.id = "bookmarklet";
 iframe.name = "bookmarklet";
+iframe.scrolling = "no";
 
 document.body.appendChild(iframe);
 
