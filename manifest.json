@@ -17,10 +17,11 @@
     "default_title": "Collect This!"
   },
   "background": {
-        "scripts": ["src/browser_action/browser_action.js"]
+        "scripts": ["src/browser_action.js"]
   },
   "permissions": [
     "tabs", "http://*/*", "https://*/*"
   ],	
-  "web_accessible_resources": ["src/browser_action/bookmarklet.html"]
+  "web_accessible_resources": ["src/bookmarklet/index.html"],
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'"
 }
