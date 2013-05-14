@@ -29,10 +29,11 @@
     <!--                <img class="logo" src="./img/logo-black-bookmarklet.png">
        <img id="close-bookmarklet-button" class="close" src="./img/close.png">-->
 </div>
-<div class="header-2">
-    <ul>
+<div class="header-2" ng-controller="BoardCtrl">
+    <ul ng-click="boardSelected">
         <li>
-            <select name="save_into_user_board">
+            <select name="save_into_user_board" >
+                <option ng-repeat="board in boards" value="{{board._id}}">{{board.name}}</option>
             </select>
         </li>
         <li class="single-multi-choser">

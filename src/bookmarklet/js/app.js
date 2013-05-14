@@ -13,28 +13,6 @@ var Bookmarklet = {
             }
         }
     },
-    boardSelected: function(){
-        var selectedBoard = $('select[name=save_into_user_board]');
-        var selectedBoardId = selectedBoard.val();
-
-
-        // We want to
-        if(selectedBoardId==="create-new-board")
-        {
-            $('#new-board-name').show();
-            $('#newBoardForm input[name=new-board-name]').focus();
-        } else {
-
-            var res = "";
-            var sheetsAttachedToBoard = collectablyBoardSheets[selectedBoardId].groups;
-            if (sheetsAttachedToBoard != null &&  sheetsAttachedToBoard != undefined) {
-                sheetsAttachedToBoard.map(function(item) {
-                    res = res + '<option value="' + item._id + '">' + item.name + '</option>'
-                });
-            }
-            $('select[name=save_into_user_sheet]', this.$el).html(res);
-        }
-    },
     confirmNewBoardName : function() {
         $('#new-board-name').hide();
 
@@ -221,6 +199,7 @@ $(document).ready(function() {
 
 
     //Add Create New Board Node and Sheet Node
+    /*
     collectablyBoardSheets['create-new-board'] = {
         name : '+ Create new board'
     };
@@ -235,6 +214,7 @@ $(document).ready(function() {
                 name :'+ Create new group'
             });
     }
+    */
 
     $("select[name=save_into_user_board]").trigger('change');
 
