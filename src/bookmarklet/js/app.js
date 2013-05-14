@@ -143,7 +143,7 @@ var collectablyBoardSheets = {
                 name :"Fancy Settings"
             }
         ]
-    }    
+    }
 };
 
 
