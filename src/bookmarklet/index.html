@@ -33,7 +33,10 @@
     <ul ng-click="boardSelected">
         <li>
             <select name="save_into_user_board" >
-                <option ng-repeat="board in boards" value="{{board._id}}">{{board.name}}</option>
+                <!--<option value="{{board._id}}">{{board.name}}</option>-->
+                <option value="Bikes">Bikes</option>
+                <option value="Bikes">Articles</option>
+                <option value="Bikes">Home</option>
             </select>
         </li>
         <li class="single-multi-choser">
@@ -112,16 +115,20 @@
         </div>
         <!-- links mockup -->
         <div class="links-area nice-scrollbar">
-            <div class="single-tab" ng-controller="TabListCtrl">
+            <!--<div class="single-tab" ng-controller="TabListCtrl">-->
+            <div class="single-tab">              
                 <!--link-->
-                <div class="single-tab-link-container" ng-repeat="tab in tabs">
-                    <div class="image-holder">
+                <div class="single-tab-link-container">
+                    <!--<div class="image-holder">
                         <img src="{{tab.thumbnail}}" class="youtube-thumb">
-                    </div>
+                    </div>-->
+                    <div class="image-holder">
+                        <img src="https://arble-page-snapshot-cache.s3.amazonaws.com/79eea6d4-4b1a-51fe-ed1d-28026a1ff94f.png" class="youtube-thumb">
+                    </div>                    
                     <div class="link-text-holder">
-                        <h3>{{tab.title}}</h3>
-                        <p class="link-bookmarklet">{{tab.url}}</p>
-                        <p class="description-bookmarklet">{{tab.description}}</p>
+                        <h3>Native Advertising Event</h3>
+                        <p class="link-bookmarklet">http://www.avc.com/a_vc/2013/05/native-advertising-event.html</p>
+                        <p class="description-bookmarklet">This Thursday from 1pm to 6pm, our portfolio company Zemanta is co-hosting a summit on native advertising here in NYC. </p>
                     </div>
                     <a href="#" class="include-link-btn"></a>
                     <div class="clearfix"></div>

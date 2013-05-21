@@ -441,10 +441,13 @@ padding: 40px 40px 0;
 }
 
 .image-holder {
+position: absolute;
 float: left;
 width: 100px;
 height: 80px;
 overflow: hidden;
+right: 120px;
+margin-top: 3px;
 }
 
 .image-holder img {
@@ -452,9 +455,8 @@ width: 100;
 }
 
 .link-text-holder {
-	margin-left:10px;
 	float:left;
-width: 516px;
+width: 560px;
 max-height: 77px;
 overflow: hidden;
 word-break: break-word;
@@ -463,8 +465,8 @@ word-wrap: break-word;
 
 .include-link-btn {
 float: right;
-margin-top: 12px;
-width: 68px;
+margin-top: 3px;
+width: 36px;
 height: 36px;
 background-color: #ff7e00;
 background-image: url(../img/check.png);
