@@ -130,11 +130,7 @@ $(document).ready(function() {
     // Add listeners
     $("select[name=save_into_user_board]").change(Bookmarklet.boardSelected);
     $("select[name=save_into_user_sheet]").change(Bookmarklet.groupSelected);
-    $("#ok-new-board-name").click(function(event) {
-        event.preventDefault();
-        event.stopPropagation();
-        Bookmarklet.confirmNewBoardName();
-    });
+
     $("#ok-new-group-name").click(function(event) {
         event.preventDefault();
         event.stopPropagation();
@@ -178,44 +174,6 @@ $(document).ready(function() {
         $(".chosenPhoto img").attr('src',$(this).attr('src'));
     });
 
-
-    $("#submitBookmark").click(function() {
-
-        var selectedBoards = $("select[name=save_into_user_board] option[selected=selected]");
-        var selectedBoard;
-        if(selectedBoards.length == 0)
-            selectedBoard = $("select[name=save_into_user_board] option").first();
-        else
-            selectedBoard = $("select[name=save_into_user_board] option[selected=selected]").first();
-
-        console.log("SelectedBoard: " + selectedBoard.html())
-        $.ajax({
-            type: "POST",
-            url: "http://localhost:4000/demoforstingday",
-            data: {boardname : selectedBoard.html()},
-            success: $("#close-bookmarklet-button").trigger('click')
-        });
-    });
-
-
-    //Add Create New Board Node and Sheet Node
-    /*
-    collectablyBoardSheets['create-new-board'] = {
-        name : '+ Create new board'
-    };
-
-    for(var key in collectablyBoardSheets)
-    {
-        var board = collectablyBoardSheets[key];
-        $("select[name=save_into_user_board]").append(Bookmarklet.boardHtmlSnippet(key, board.name));
-        if(board.groups)
-            collectablyBoardSheets[key].groups.push(
-            {   _id : 'new-sheet',
-                name :'+ Create new group'
-            });
-    }
-    */
-
     $("select[name=save_into_user_board]").trigger('change');
 
     //Populate Images
@@ -236,5 +194,17 @@ $(document).ready(function() {
 	 $(this).closest('.single-tab-link-container').toggleClass('do-not-bookmark');
     });
 });
+
+/*
+angular.module('bookmarklet', ['loginService'])
+
+angular.module('loginService', ['ngResource']).
+    factory('Login', function($resource){
+        return $resource('/api/login', {}, {
+            query: {method:'POST', params:{}}
+        });
+    });
+*/
+
 
 

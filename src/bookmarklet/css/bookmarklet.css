@@ -26,7 +26,7 @@ padding: 3px;
 #login-panel {
     display: none;
     position: absolute;
-    top: 0px;
+    /*top: 0px;*/
     left: 0px;
     height: 100%;
     width: 100%;
@@ -60,7 +60,6 @@ padding: 3px;
 }
 
 #new-board-name {
-display: none;
 position: absolute;
 top: 51px;
 padding: 20px;

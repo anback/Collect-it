@@ -1,4 +1,4 @@
-<html ng-app>
+<html ng-app="bookmarklet">
 <head>
     <title>Bookmark verification</title>
     <link rel="stylesheet" href="./css/bootstrap.css">
@@ -15,25 +15,22 @@
 <body>
 <div class="bookmarklet-background">
 <div class="container white-bg">
-<div class="header">
+<div class="header" ng-controller="AddButtonCtrl">
     <ul>
         <li class="header-hamburger">
         </li>
         <li>
-            <input id="submitBookmark" type="submit" value="Add">
+            <input id="submitBookmark" ng-click="Save()" type="submit" value="Add">
         </li>
         <li id="close-bookmarklet-button" class="header-close">
         </li>
     </ul>
     <div class="clearfix"></div>
-    <!--                <img class="logo" src="./img/logo-black-bookmarklet.png">
-       <img id="close-bookmarklet-button" class="close" src="./img/close.png">-->
 </div>
 <div class="header-2" ng-controller="BoardCtrl">
-    <ul ng-click="boardSelected">
+    <ul >
         <li>
-            <select name="save_into_user_board" >
-                <option ng-repeat="board in boards" value="{{board._id}}">{{board.name}}</option>
+            <select ng-model="selectedBoardGroup.board" ng-options="board.name for board in boards" name="save_into_user_board" >
             </select>
         </li>
         <li class="single-multi-choser">
@@ -42,58 +39,37 @@
         </li>
     </ul>
     <div class="clearfix"></div>
-</div>
-<div class="body">
-    <div class="content">
-        <!--<div class="left-side">
-           <div class="page-pane block">
-               <div id="thumbnail-preview">
-                   <img src="https://api.url2png.com/v3/P5061748FC65B5/5d196e3c0d25066d7d404c2b9c01e923/580x406/http%3A//www.this-page-intentionally-left-blank.org/">
-               </div>
-           </div>
-           <div class="images-pane hide">
-               <div class="chosenPhoto">
-                   <img src="http://blondinbella.se/files/2013/04/SavedPicture-201343114657.jpg" class="img-polaroid-bookmarklet">
-               </div>
-               <div class="mini-thumbs-scroll">
-                   <ul class="thumbnails">
-                       <li class="mini-thumbs-scroll-pic">
-                           <a class="thumbnail">
-                               <img src="http://blondinbella.se/files/2013/04/SavedPicture-201343114657.jpg" id="0">
-                           </a>
-                       </li>
-                       <li class="mini-thumbs-scroll-pic">
-                           <a class="thumbnail">
-                               <img src="http://blondinbella.se/files/2013/04/SavedPicture-20134311471.jpg" id="1">
-                           </a>
-                       </li>
-                       <li class="mini-thumbs-scroll-pic">
-                           <a class="thumbnail">
-                               <img src="http://blondinbella.spotlife.se/files/2012/12/blondinbella_900x500_2.jpg" id="7">
-                           </a>
-                       </li>
-                   </ul>
-               </div>
-           </div>
-           </div>-->
-        <!--                    <div class="right-side">
-           <input id="bookmarkletVerificationFormTitle" type="text" name="title" placeholder="Title">
-           <textarea rows="7" cols="30" name="description" placeholder="Add a note (optional)">This Page Intentionally Left Blank (according to the recommendations of the TPILB-Project).</textarea>
-           <div id="userboards">
-               <select name="save_into_user_board">
-               </select>
-               -->
-        <div id="new-board-name">
-            <div id="newBoardForm">
-                <!--<div class="new-board-group-hierarchy"></div>-->
-                <input type="text" name="new-board-name" placeholder="New board Name...">
-                <!--<input type="text" name="new-sheet-name" placeholder="New group Name..." class="new-group-with-new-board-input">-->
-                <div class="button-container">
-                    <button id="cancel-new-board-name" class="cancel-button">Cancel</button>
-                    <button id="ok-new-board-name" class="ok-button">OK</button>
-                </div>
+    <div id="new-board-name" ng-show="showNewBoardForm">
+        <div id="newBoardForm">
+            <!--<div class="new-board-group-hierarchy"></div>-->
+            <input ng-model="newBoardName" type="text" name="new-board-name" placeholder="New board Name...">
+            <!--<input type="text" name="new-sheet-name" placeholder="New group Name..." class="new-group-with-new-board-input">-->
+            <div class="button-container">
+                <button id="cancel-new-board-name" class="cancel-button">Cancel</button>
+                <button id="ok-new-board-name" ng-click="createBoard()" class="ok-button">OK</button>
             </div>
         </div>
+    </div>
+</div>
+<div class="body">
+    <div id="login-panel">
+       <p id="login-message">Bad credentials</p>
+       <div id="forgot-password-modal">
+       <div class="close-forgot-password">Go back to login</div>
+       <!--iframe src="/account/forgotpassword" frameborder="0" scrolling="no" height="400"></iframe-->
+       </div>
+       <div id="login-box">
+           <div id="login-box-inner">
+               <h3>Login</h3>
+               <form action="http://beta.collectably.com//login" method="post">
+                   <div><input type="text" placeholder="Email" name="username"></div>
+                   <div><input type="password" placeholder="Password" name="password"></div>
+                   <div><input type="submit" value="Login"><span id="forgot-password-link">Forgot your password?</span></div>
+               </form>
+           </div>
+       </div>
+   </div>
+    <div class="content">
         <!--
            <div id="save-into-user-sheet">
                <img src="./img/level-marker.png" />
@@ -123,7 +99,7 @@
                         <p class="link-bookmarklet">{{tab.url}}</p>
                         <p class="description-bookmarklet">{{tab.description}}</p>
                     </div>
-                    <a href="#" class="include-link-btn"></a>
+                    <a href="#" ng-click="toggleIncludeCard(tab)" class="include-link-btn"></a>
                     <div class="clearfix"></div>
                 </div>
             </div>
@@ -141,21 +117,46 @@
 </div>
 </body>
 </html>
-<!--div id="login-panel">
-   <p id="login-message">Bad credentials</p>
-   <div id="forgot-password-modal">
-   <div class="close-forgot-password">Go back to login</div>
-   <iframe src="/account/forgotpassword" frameborder="0" scrolling="no" height="400"></iframe>
-   </div>
-   <div id="login-box">
-   <div id="login-box-inner">
-       <h3>Login</h3>
-       <form action="http://beta.collectably.com//login" method="post">
-           <div><input type="text" placeholder="Email" name="username"></div>
-           <div><input type="password" placeholder="Password" name="password"></div>
-           <div><input type="submit" value="Login"><span id="forgot-password-link">Forgot your password?</span></div>
-       </form>
-   </div>
-   </div>
-   <p></p>
-   </div-->
+
+
+
+
+
+<!--<div class="left-side">
+<div class="page-pane block">
+<div id="thumbnail-preview">
+   <img src="https://api.url2png.com/v3/P5061748FC65B5/5d196e3c0d25066d7d404c2b9c01e923/580x406/http%3A//www.this-page-intentionally-left-blank.org/">
+</div>
+</div>
+<div class="images-pane hide">
+<div class="chosenPhoto">
+   <img src="http://blondinbella.se/files/2013/04/SavedPicture-201343114657.jpg" class="img-polaroid-bookmarklet">
+</div>
+<div class="mini-thumbs-scroll">
+   <ul class="thumbnails">
+       <li class="mini-thumbs-scroll-pic">
+           <a class="thumbnail">
+               <img src="http://blondinbella.se/files/2013/04/SavedPicture-201343114657.jpg" id="0">
+           </a>
+       </li>
+       <li class="mini-thumbs-scroll-pic">
+           <a class="thumbnail">
+               <img src="http://blondinbella.se/files/2013/04/SavedPicture-20134311471.jpg" id="1">
+           </a>
+       </li>
+       <li class="mini-thumbs-scroll-pic">
+           <a class="thumbnail">
+               <img src="http://blondinbella.spotlife.se/files/2012/12/blondinbella_900x500_2.jpg" id="7">
+           </a>
+       </li>
+   </ul>
+</div>
+</div>
+</div>-->
+<!--                    <div class="right-side">
+   <input id="bookmarkletVerificationFormTitle" type="text" name="title" placeholder="Title">
+   <textarea rows="7" cols="30" name="description" placeholder="Add a note (optional)">This Page Intentionally Left Blank (according to the recommendations of the TPILB-Project).</textarea>
+   <div id="userboards">
+       <select name="save_into_user_board">
+       </select>
+       -->
