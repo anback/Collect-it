@@ -10,9 +10,7 @@ myApp.factory('SelectedBoardGroup', function() {
 
 Utils.baseurl = 'http://localhost:3000';
 
-function TabListCtrl($scope, Cards) {
-
-    $scope.cards = Cards;
+function TabListCtrl($scope, $rootScope) {
     var data = JSON.parse(decodeURIComponent(location.search).substring(1));
 
     data = data.filter(function(item) {
@@ -22,39 +20,38 @@ function TabListCtrl($scope, Cards) {
     var i = 0;
     var dataSet = {};
     data.forEach(function(item) {
-        dataSet[i] = {index : i, url : item.url, title : item.title, thumbnail : item.favIconUrl }
+        dataSet[i] = {index : i, origin : item.url, name : item.title}
         i++;
     });
 
     $scope.tabs = Utils.getValues(dataSet);
     Utils.getValues(dataSet).forEach(function(item) {
-        $.get(Utils.baseurl + '/api/card/template/' + encodeURIComponent(item.url), function(card) {
-            dataSet[item.index].description = card.description;
-            dataSet[item.index].thumbnail = card.page.screenShotUrl;
-            dataSet[item.index].title = card.name || dataSet[item.index].title;
+        $.get(Utils.baseurl + '/api/card/template/' + encodeURIComponent(item.origin), function(card) {
+            console.log(card);
+
+            if(!card.name)
+                card.name = dataSet[item.index].name;
+
+            dataSet[item.index] = card;
 
             $scope.tabs = Utils.getValues(dataSet);
-            $scope.cards = $scope.tabs;
-
-            console.log($scope.cards);
+            $rootScope.cards = $scope.tabs;
             $scope.$digest();
         });
     });
 
     $scope.toggleCard = function(tab) {
-        $scope.cards = $scope.cards.filter(function(item) {
+        $rootScope.cards = $rootScope.cards.filter(function(item) {
             item.index != tab.index;
         });
     }
 }
 
-function AddButtonCtrl($scope, $http, Cards, SelectedBoardGroup) {
+function AddButtonCtrl($scope, $http, $rootScope) {
 
     $scope.Save = function() {
-
-        console.log(Cards);
-        var cards = Cards.map(function(item) {
-            item.board = SelectedBoardGroup.board._id;
+        var cards = $rootScope.cards.map(function(item) {
+            item.board = $rootScope.selectedBoardGroup.board._id;
             return item;
         });
 
@@ -65,12 +62,12 @@ function AddButtonCtrl($scope, $http, Cards, SelectedBoardGroup) {
     }
 }
 
-function BoardCtrl($scope, $http, SelectedBoardGroup) {
-
-    $scope.selectedBoardGroup = SelectedBoardGroup;
+function BoardCtrl($scope, $http, $rootScope) {
 
     $http.get(Utils.baseurl + '/api/boards/my').success(function(data) {
         $scope.boards = [];
+        $scope.selectedBoardGroup = {};
+        $rootScope.selectedBoardGroup = {};
 
         data.forEach(function(item) {
             $scope.boards.push(item);
@@ -78,6 +75,7 @@ function BoardCtrl($scope, $http, SelectedBoardGroup) {
         $scope.boards.push({_id : "create-new-board", name : '+ Create new board'});
 
         $scope.selectedBoardGroup.board = $scope.boards[0];
+        $rootScope.selectedBoardGroup.board = $scope.selectedBoardGroup.board;
 
         $scope.$watch('selectedBoardGroup.board', function() {
 
@@ -86,14 +84,14 @@ function BoardCtrl($scope, $http, SelectedBoardGroup) {
         });
     });
 
-
-
     $scope.createBoard = function() {
 
         var updateBoardSelect = function(board) {
             $scope.boards.pop();
             $scope.boards.push(board);
             $scope.selectedBoardGroup.board = $scope.boards[$scope.boards.length - 1];
+            $rootScope.selectedBoardGroup.board = $scope.selectedBoardGroup.board;
+
             console.log($scope.selectedBoardGroup.board);
         }
 

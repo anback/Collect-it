@@ -92,14 +92,14 @@
                 <!--link-->
                 <div class="single-tab-link-container" ng-repeat="tab in tabs">
                     <div class="image-holder">
-                        <img src="{{tab.thumbnail}}" class="youtube-thumb">
+                        <img src="{{tab.page.screenShotUrl}}" class="youtube-thumb">
                     </div>
                     <div class="link-text-holder">
-                        <h3>{{tab.title}}</h3>
-                        <p class="link-bookmarklet">{{tab.url}}</p>
+                        <h3>{{tab.name}}</h3>
+                        <p class="link-bookmarklet">{{tab.origin}}</p>
                         <p class="description-bookmarklet">{{tab.description}}</p>
                     </div>
-                    <a href="#" ng-click="toggleIncludeCard(tab)" class="include-link-btn"></a>
+                    <a href="#" ng-click="toggleCard(tab)" class="include-link-btn"></a>
                     <div class="clearfix"></div>
                 </div>
             </div>
