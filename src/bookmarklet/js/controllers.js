@@ -20,7 +20,7 @@ function TabListCtrl($scope, $rootScope) {
     var i = 0;
     var dataSet = {};
     data.forEach(function(item) {
-        dataSet[i] = {index : i, origin : item.url, name : item.title}
+        dataSet[i] = {index : i, origin : item.url, name : item.title, isChosen : true}
         i++;
     });
 
