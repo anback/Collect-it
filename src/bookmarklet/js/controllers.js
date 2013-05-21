@@ -31,31 +31,42 @@ function TabListCtrl($scope, $rootScope) {
 
             if(!card.name)
                 card.name = dataSet[item.index].name;
-
+            card.isChosen = true;
             dataSet[item.index] = card;
 
             $scope.tabs = Utils.getValues(dataSet);
             $rootScope.cards = $scope.tabs;
+            console.log($rootScope.cards);
             $scope.$digest();
         });
     });
 
     $scope.toggleCard = function(tab) {
-        $rootScope.cards = $rootScope.cards.filter(function(item) {
-            item.index != tab.index;
+        $scope.tabs = $scope.tabs.map(function(item) {
+            if(item._id == tab._id)
+                item.isChosen = !item.isChosen;
+            return item;
         });
+        $rootScope.cards = $scope.tabs;
     }
 }
 
 function AddButtonCtrl($scope, $http, $rootScope) {
 
     $scope.Save = function() {
-        var cards = $rootScope.cards.map(function(item) {
+
+        var cards = $rootScope.cards.filter(function(item) {
+            return item.isChosen;
+        });
+
+        cards = cards.map(function(item) {
             item.board = $rootScope.selectedBoardGroup.board._id;
             return item;
         });
 
         console.log(cards);
+
+
         $http.post(Utils.baseurl + '/api/cards', cards).success(function() {
             $("#close-bookmarklet-button").trigger('click');
         });

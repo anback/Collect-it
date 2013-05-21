@@ -36,8 +36,8 @@
     <file path="$APPLICATION_HOME_DIR$/lib/webstorm.jar!/standardSchemas/xhtml1-frameset.xsd" changelist="90e46fec-a319-4100-b39f-2715eb60018f" time="1368097511042" ignored="false" />
     <file path="$APPLICATION_HOME_DIR$/lib/webstorm.jar!/standardSchemas/XMLSchema-instance.xsd" changelist="90e46fec-a319-4100-b39f-2715eb60018f" time="1368097511042" ignored="false" />
     <file path="/browser_action.js" changelist="90e46fec-a319-4100-b39f-2715eb60018f" time="1368106101769" ignored="false" />
-    <file path="/index.html" changelist="90e46fec-a319-4100-b39f-2715eb60018f" time="1369168524280" ignored="false" />
-    <file path="/controllers.js" changelist="90e46fec-a319-4100-b39f-2715eb60018f" time="1369167379499" ignored="false" />
+    <file path="/index.html" changelist="90e46fec-a319-4100-b39f-2715eb60018f" time="1369171453925" ignored="false" />
+    <file path="/controllers.js" changelist="90e46fec-a319-4100-b39f-2715eb60018f" time="1369171878956" ignored="false" />
     <file path="/utils.js" changelist="90e46fec-a319-4100-b39f-2715eb60018f" time="1368554512908" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -67,24 +67,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="bootstrap.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/bookmarklet/js/bootstrap.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="browser_action.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/browser_action.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="0" selection-start="336" selection-end="336" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="bookmarklet.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/bookmarklet/bookmarklet.js">
           <provider selected="true" editor-type-id="text-editor">
@@ -94,28 +76,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="app.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/bookmarklet/js/app.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="190" column="40" selection-start="6162" selection-end="6162" vertical-scroll-proportion="-25.6">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="controllers.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/bookmarklet/js/controllers.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="45" column="11" selection-start="1272" selection-end="1272" vertical-scroll-proportion="0.6213592">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/options_custom/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="19" selection-start="275" selection-end="276" vertical-scroll-proportion="0.0">
+            <state line="45" column="35" selection-start="1322" selection-end="1322" vertical-scroll-proportion="0.50970876">
               <folding />
             </state>
           </provider>
@@ -133,7 +97,7 @@
       <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/bookmarklet/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="101" column="52" selection-start="4561" selection-end="4571" vertical-scroll-proportion="-7.897959">
+            <state line="105" column="14" selection-start="4760" selection-end="4760" vertical-scroll-proportion="-11.571428">
               <folding />
             </state>
           </provider>
@@ -143,6 +107,42 @@
         <entry file="file://$PROJECT_DIR$/src/bookmarklet/css/bootstrap.css">
           <provider selected="true" editor-type-id="text-editor">
             <state line="20" column="7" selection-start="324" selection-end="325" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/options_custom/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="12" column="19" selection-start="275" selection-end="276" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="app.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/bookmarklet/js/app.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="186" column="10" selection-start="6108" selection-end="6108" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="browser_action.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/browser_action.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="10" column="0" selection-start="336" selection-end="336" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="bootstrap.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/bookmarklet/js/bootstrap.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -208,6 +208,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -322,7 +323,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -332,8 +332,8 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../collectably-backend" />
     <property name="FullScreen" value="false" />
     <property name="DefaultHtmlFileTemplate" value="Html5" />
-    <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -548,13 +548,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/bookmarklet/js/bootstrap.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/bookmarklet/js/utils.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="10" column="5" selection-start="212" selection-end="212" vertical-scroll-proportion="0.0">
@@ -562,23 +555,30 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/bookmarklet/js/bootstrap.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/bookmarklet/js/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="190" column="40" selection-start="6162" selection-end="6162" vertical-scroll-proportion="-25.6">
+        <state line="186" column="10" selection-start="6108" selection-end="6108" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/bookmarklet/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="101" column="52" selection-start="4561" selection-end="4571" vertical-scroll-proportion="-7.897959">
+        <state line="105" column="14" selection-start="4760" selection-end="4760" vertical-scroll-proportion="-11.571428">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/bookmarklet/js/controllers.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="45" column="11" selection-start="1272" selection-end="1272" vertical-scroll-proportion="0.6213592">
+        <state line="45" column="35" selection-start="1322" selection-end="1322" vertical-scroll-proportion="0.50970876">
           <folding />
         </state>
       </provider>

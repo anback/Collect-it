@@ -90,7 +90,7 @@
         <div class="links-area nice-scrollbar">
             <div class="single-tab" ng-controller="TabListCtrl">
                 <!--link-->
-                <div class="single-tab-link-container" ng-repeat="tab in tabs">
+                <div class="single-tab-link-container" ng-repeat="tab in tabs" ng-class="{'do-not-bookmark' : !tab.isChosen}">
                     <div class="image-holder">
                         <img src="{{tab.page.screenShotUrl}}" class="youtube-thumb">
                     </div>
