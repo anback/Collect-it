@@ -13,12 +13,15 @@
     <script src="js/app.js" type="text/javascript"></script>
 </head>
 <body>
+
 <div class="bookmarklet-background">
     <div class="container white-bg">
         <div class="header">
             <ul>
-                <li class="header-hamburger">
+              <a href="http://www.collectably.com" target="blank">
+                <li class="header-home">
                 </li>
+              </a>
                 <li>
                     <input id="submitBookmark" type="submit" value="Add">
                 </li>
@@ -26,10 +29,70 @@
                 </li>
             </ul>
             <div class="clearfix"></div>
-            <!--                <img class="logo" src="./img/logo-black-bookmarklet.png">
-               <img id="close-bookmarklet-button" class="close" src="./img/close.png">-->
         </div>
-        <div class="header-2" ng-controller="BoardCtrl">
+
+        <div class="inner-box">
+            <div class="left-inner-box nice-scrollbar">
+              <div class="left-inner-box-padding" ng-controller="TabListCtrl">
+                <div class="select-all-toggle">
+                  <a href="#">Select all</a>
+                </div>
+                <div class="link-holder" ng-repeat="tab in tabs">
+                  <!--<h2>Link Header</h2>
+                  <p class="description">
+                     Description   
+                  </p>
+                  <p class="url">
+                    Url
+                  </p>-->
+
+                  <!--<img src="{{tab.thumbnail}}" class="youtube-thumb">-->
+                  <div class="image-holder">
+                    <div style="background-image: url(https://api.url2png.com/v6/P5061748FC65B5/14980f2ccf54d627f57c6d39c11e64c4/png/?url=http%3A%2F%2Ftechcrunch.com%2F2013%2F06%2F08%2Fcooperation-methods-protected-innocents-from-prism%2F&viewport=1024x900&thumbnail_max_width=380);">  
+                      <!--<img src="https://api.url2png.com/v6/P5061748FC65B5/cc505f8316ba12bc22853e537bd5bdf9/png/?url=http%3A%2F%2Fpandodaily.com%2F2013%2F04%2F16%2Fnew-immigration-plan-outlined-startup-visa-is-a-go-h-1b-quota-to-rise-tougher-employee-monitoring-required%2F&viewport=1024x900&thumbnail_max_width=380" class="youtube-thumb">-->
+                    </div>
+                  </div>  
+                  <h3>{{tab.title}}</h3>
+                  <p class="link-bookmarklet">{{tab.url}}</p>
+                  <p class="description-bookmarklet">{{tab.description}}</p>
+                  <a href="#" class="include-link-btn"></a>
+                </div>
+              </div>
+            </div>
+            <div class="right-inner-box">  
+              <div class="right-inner-box-padding"> 
+                  <div class="dropdown-replacer-box board-dropdown">
+                      <span class="dropdown-label">Choose Board</span>
+                      <div class="dropdown-replacer">
+                          <div class="arrow-down"></div>
+                          <span class="dropdown-board-name ng-binding">Articles</span>
+                          <select ng-model="selectedBoard" ng-options="board.data.name for board in boards" name="save_into_user_board" class="ng-pristine ng-valid"><option value="0" selected="selected">Articles</option><option value="1">Blogs</option><option value="2">Business model generation books and movies</option><option value="3">Collectably possible business models</option><option value="4">Delicious import</option><option value="5">Facebook</option><option value="6">Single speed</option><option value="7">Time warner</option><option value="8">kjjh</option><option value="9">new board</option><option value="10">testboard x</option><option value="11">+ Create new board</option></select>
+                      </div>
+                  </div>
+                  <div class="dropdown-replacer-box-padding">
+                      <div class="dropdown-replacer-box group-dropdown">
+                          <div class="dropdown-label">Choose Sub-board <span class="dropdown-label-optional">(Optional)</span></div>
+                          <div class="dropdown-replacer">
+                          <div class="hierarchy-icon-vertical"></div>
+                          <div class="hierarchy-icon-horizontal"></div>
+                              <div class="arrow-down"></div>
+                              <span class="dropdown-board-name ng-binding">- -</span>
+                              <select ng-model="selectedGroup" ng-options="group.data.name for group in groups" name="save_into_user_board" class="ng-pristine ng-valid"><option value="0" selected="selected">- -</option><option value="1">Data</option><option value="2">+ Create new group</option></select>
+                          </div>
+                      </div>
+                  </div>    
+              </div>
+            </div>
+            <div class="clearfix"></div>
+        </diV>
+        <div class="bottom-logo">
+          <img class="logo" src="./img/logo-black.png">
+        </div>
+
+        <!-- SATURDAY
+        *****
+        -->
+        <!--<div class="header-2" ng-controller="BoardCtrl">
             <ul ng-click="boardSelected">
                 <li>
                     <select name="save_into_user_board" >
@@ -42,9 +105,20 @@
                 </li>
             </ul>
             <div class="clearfix"></div>
-        </div>
+        </div>-->
+        <!-- SATURDAY 
+        *****
+        -->
+
+
+        <!-- SATURDAY 
+        *****
+        
         <div class="body">
             <div class="content">
+              ***** SATURDAY -->
+
+
                 <!--<div class="left-side">
                    <div class="page-pane block">
                        <div id="thumbnail-preview">
@@ -83,24 +157,18 @@
                        <select name="save_into_user_board">
                        </select>
                        -->
+                <!--SATURDAY-->
+                <!--*******
                 <div id="new-board-name">
                     <div id="newBoardForm">
-                        <!--<div class="new-board-group-hierarchy"></div>-->
                         <input type="text" name="new-board-name" placeholder="New board Name...">
-                        <!--<input type="text" name="new-sheet-name" placeholder="New group Name..." class="new-group-with-new-board-input">-->
                         <div class="button-container">
                             <button id="cancel-new-board-name" class="cancel-button">Cancel</button>
                             <button id="ok-new-board-name" class="ok-button">OK</button>
                         </div>
                     </div>
                 </div>
-                <!--
-                   <div id="save-into-user-sheet">
-                       <img src="./img/level-marker.png" />
-                       <select name="save_into_user_sheet">
-                       </select>
-                   </div>
-                   -->
+ 
                 <div id="new-sheet-name">
                     <form id="newGroupForm">
                         <input type="text" name="new-sheet-name" placeholder="New group name...">
@@ -110,10 +178,10 @@
                         </div>
                     </form>
                 </div>
-                <!-- links mockup -->
+                
                 <div class="links-area nice-scrollbar">
                     <div class="single-tab" ng-controller="TabListCtrl">
-                        <!--link-->
+                        
                         <div class="single-tab-link-container" ng-repeat="tab in tabs">
                             <div class="image-holder">
                                 <img src="{{tab.thumbnail}}" class="youtube-thumb">
@@ -128,12 +196,19 @@
                         </div>
                     </div>
                 </div>
-                <!-- links mockup -->
+                
                 <div class="footer">
                     <img class="logo" src="./img/logo-black.png">
                 </div>
             </div>
         </div>
+      -->
+
+      <!--
+      *********
+      SATURDAY
+    -->
+
     </div>
     <div id="bookmarklet-loading-panel" style="display: none;">
         <p><img src="./img/ajax-loader.gif" class="loading"><span>LOADING</span></p>

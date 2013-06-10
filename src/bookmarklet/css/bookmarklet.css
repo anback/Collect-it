@@ -2,6 +2,7 @@ body {
 	background-color:transparent !important;
     font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
     font-size: 13px;
+    
 }
 
 ul {
@@ -16,7 +17,194 @@ background: rgba(60, 60, 60, 0.45);
 margin: 0 auto;
 padding: 3px;
 -webkit-box-shadow: 0 3px 7px rgba(0, 0, 0, 0.25);
+max-width: 1100px;
+max-height: 100%;
 }
+
+
+
+/* new css 8 Jun*/
+
+
+.inner-box {
+    text-align: left;
+    max-height: 100%;
+    overflow: hidden;
+}
+.left-inner-box, .right-inner-box {
+    width: 50%;
+    float: left;
+}
+
+.left-inner-box {
+    overflow-x: hidden;
+    overflow-y: auto;
+    max-height: 56%;
+    margin-top: 10%;
+    margin-bottom: 12%;
+
+}
+.right-inner-box {
+    margin-top: 10%;
+
+}
+
+.left-inner-box-padding {
+    padding-right: 20px;
+    padding-left: 40px;
+}
+
+.right-inner-box-padding {
+padding-left: 40px;
+padding-right: 40px;
+}
+
+.select-all-toggle {
+    text-align: right;
+    margin-bottom: 8px;
+}
+
+.select-all-toggle a {
+color: #999;
+font-size: 12px;
+text-transform: uppercase;;
+display: inline-table;
+text-decoration: none;
+}
+.select-all-toggle a:hover {
+text-decoration: underline;
+color: #000;
+}
+
+
+.link-holder {
+    padding: 15px 146px 15px 19px;
+    background-color: #eee;
+    line-height: 1.2em;
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.link-holder h3 {
+    font-size: 12px !important;
+    line-height: 1.3em;
+}
+
+.link-holder .image-holder {
+position: absolute;
+width: 110px;
+height: 100%;
+overflow: hidden;
+right: 0;
+top: 0;
+}
+
+.link-holder .image-holder div {
+width: 100%;
+height: 100%;
+background-size: cover;
+background-position: left top;
+}
+
+.bottom-logo {
+    height: 50px;
+    bottom: 0;
+    left: 40px;
+    right: 40px;
+    position: absolute;
+    border-top: 1px solid #ccc;
+    background-color: #FFF;
+}
+
+.bottom-logo .logo {
+margin-top: 18px;
+}
+
+/* --- new dropdowns --- */
+.bookmarklet-background .board-dropdown {
+margin-bottom: 20px;
+width: 100%;
+}
+
+.bookmarklet-background .inner-box .dropdown-label {
+display: block;
+font-size: 12px;
+color: #999;
+margin-bottom: 12px;
+height: 10px;
+margin-left: 7px;
+}
+
+.bookmarklet-background .dropdown-replacer {
+-webkit-transition: all 0.1s;
+-moz-transition: all 0.1s;
+-o-transition: all 0.1s;
+transition: all 0.1s;
+margin: 0;
+border: 1px solid #cccccc;
+height: 50px;
+position: relative;
+}
+
+.bookmarklet-background .dropdown-replacer .arrow-down {
+position: absolute;
+right: 15px;
+top: 22px;
+width: 0;
+height: 0;
+border-left: 5px solid transparent;
+border-right: 5px solid transparent;
+border-top: 5px solid black;
+}
+
+.bookmarklet-background .inner-box .dropdown-board-name {
+line-height: 50px;
+margin-left: 15px;
+display: block;
+font-weight: 700;
+font-size: 14px;
+}
+
+.bookmarklet-background .inner-box select {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 50px;
+border: none;
+opacity: 0;
+cursor: pointer;
+}
+.bookmarklet-background .dropdown-replacer-box-padding {
+padding-left: 60px;
+}
+.bookmarklet-background .group-dropdown {
+width: 100%;
+}
+.bookmarklet-background .group-dropdown .hierarchy-icon-vertical {
+width: 1px;
+height: 51px;
+position: absolute;
+background-color: #ccc;
+z-index: 0;
+top: -27px;
+left: -40px;
+}
+.bookmarklet-background .group-dropdown .hierarchy-icon-horizontal {
+width: 25px;
+height: 1px;
+position: absolute;
+background-color: #ccc;
+z-index: 0;
+top: 23px;
+left: -39px;
+}
+.bookmarklet-background .dropdown-replacer:hover {
+border: 1px solid black;
+}
+/* --- new dropdowns --- */
+
+/* new css */
 
 #login-message {
     display:none;
@@ -129,10 +317,18 @@ input[type=text] {
 }
 
 .container {
-    width:850px;
+    width:100%;
+    max-height: 100%;
     margin: 0;
     padding: 0;
     text-align: center;
+    position: relative;
+
+    -webkit-transition: height .2s ease;
+    -moz-transition: height .2s ease;
+    -ms-transition: height .2s ease;
+    -o-transition: height .2s ease;
+    transition: height .2s ease;
 }
 .white-bg{
 	background-color:white;
@@ -141,24 +337,29 @@ input[type=text] {
 .header {
 	background-color:#EEE;
 	font-size:14px;
-	position:relative;
+	position:absolute;
+    width: 100%;
+    z-index: 2;
 }
 .header li{
+    height: 57px;
 	float:left;
+    width: 100%;
 }
 .header ul{
 	
 }
 .header input {
-width: 850px;
-min-height: 56px;
-background: transparent;
+margin-top: 9px;
+padding: 11px 49px;
+background-color: #DDD;
 border-bottom: 1px solid #eee;
-border-top:none;
-border-left:none;
-border-right:none;
+border-top: none;
+border-left: none;
+border-right: none;
 text-transform: uppercase;
 font-weight: 700;
+border-radius: 5px;
 -webkit-transition: all .1s ease;
 -moz-transition: all .1s ease;
 -ms-transition: all .1s ease;
@@ -167,16 +368,20 @@ transition: all .1s ease;
 }
 
 .header input:hover {
-background: #ffffff;
+/*background: #ffffff;
 border-bottom-color:#ccc;
 border-right-color:white;
-border-left-color:white;
+border-left-color:white;*/
+/*background-color: #0094D4;*/
+/*background-color: #454545;*/
+background-color: #FFF;
+/*color: #FFF;*/
 }
 
 .header img.close {
     text-align: right;
 }
-.header .header-hamburger, .header .header-close {
+.header .header-home, .header .header-close {
 width:56px;
 height:56px;
 position:absolute;
@@ -184,7 +389,7 @@ position:absolute;
 opacity:.2;
 
 }
-.header .header-hamburger:hover, .header .header-close:hover {
+.header .header-home:hover, .header .header-close:hover {
 	color:#FFF;
 	/*background-color:#000;*/
 	background-position-y: -80px;
@@ -194,6 +399,13 @@ opacity:.2;
 	cursor:pointer;
 }
 
+.header-home{
+    left:0;
+background-image: url(../img/home.png);
+background-repeat: no-repeat;
+background-position-y: -80px;
+background-position-x: center;
+}
 .header-hamburger{
 	left:0;
 background-image: url(../img/menu.png);
@@ -440,20 +652,6 @@ opacity: .5;
 padding: 40px 40px 0;
 }
 
-.image-holder {
-position: absolute;
-float: left;
-width: 100px;
-height: 80px;
-overflow: hidden;
-right: 55px;
-margin-top: 3px;
-}
-
-.image-holder img {
-width: 100;
-}
-
 .link-text-holder {
 	float:left;
 width: 560px;
@@ -464,15 +662,16 @@ word-wrap: break-word;
 }
 
 .include-link-btn {
-float: right;
-margin-top: 3px;
-width: 36px;
-height: 36px;
-background-color: #ff7e00;
+position: absolute;
+top: 0;
+right: 0;
+width: 50px;
+height: 42px;
 background-image: url(../img/check.png);
 background-repeat: no-repeat;
 background-position: center;
-border-radius: 5px;
+background-size: 27px;
+background-color: #454545;
 }
 
 .links-area h3, .links-area p {
@@ -503,12 +702,12 @@ color: #999;
 
 .single-tab-link-container {
     position: relative;
-min-height: 110px;
--webkit-transition: all .1s ease;
--moz-transition: all .1s ease;
--ms-transition: all .1s ease;
--o-transition: all .1s ease;
-transition: all .1s ease;
+    min-height: 110px;
+    -webkit-transition: all .1s ease;
+    -moz-transition: all .1s ease;
+    -ms-transition: all .1s ease;
+    -o-transition: all .1s ease;
+    transition: all .1s ease;
 
 }
 .nice-scrollbar::-webkit-scrollbar {
@@ -517,7 +716,7 @@ width: 12px;
 }
 .nice-scrollbar::-webkit-scrollbar-button {
 display: block;
-height: 14px;
+height: 12px;
 }
 
 .nice-scrollbar::-webkit-scrollbar-track-piece {
