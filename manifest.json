@@ -22,7 +22,7 @@
   "masterpermissions": [
     "tabs", "http://*/*", "https://*/*"
   ],  
-  "permissions": [
+  "permissions2": [
     "tabs", "http://*/*", "https://*/*"
   ],	
   "web_accessible_resources": ["src/bookmarklet/index.html","src/bookmarklet/%7B%7Btab.url%7D%7D"],
