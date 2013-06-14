@@ -19,6 +19,9 @@
   "background": {
         "scripts": ["src/browser_action.js"]
   },
+  "masterpermissions": [
+    "tabs", "http://*/*", "https://*/*"
+  ],  
   "permissions": [
     "tabs", "http://*/*", "https://*/*"
   ],	
