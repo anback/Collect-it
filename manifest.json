@@ -24,4 +24,5 @@
   ],	
   "web_accessible_resources": ["src/bookmarklet/index.html","src/bookmarklet/%7B%7Btab.url%7D%7D"],
   "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'"
+  "test" : "test"
 }
